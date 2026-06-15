@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Yadav | Premium Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<img class="profile" src="myphoto.jpg" alt="Krishna Yadav">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+overflow-x:hidden;
+}
+
+body.light{
+background:#f5f5f5;
+color:#111;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(10px);
+background:rgba(15,23,42,.75);
+z-index:1000;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.light nav a{
+color:#111;
+}
+
+.toggle{
+padding:8px 15px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:#38bdf8;
+color:white;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:100px 20px 50px;
+background:
+linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.85)),
+url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #38bdf8;
+object-fit:cover;
+margin-bottom:25px;
+box-shadow:0 0 30px rgba(56,189,248,.4);
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.typing{
+font-size:1.3rem;
+color:#38bdf8;
+height:35px;
+}
+
+.btns{
+margin-top:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:8px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+background:#38bdf8;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:90px 10%;
+}
+
+.title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
+}
+
+.glass{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:20px;
+padding:30px;
+}
+
+.skills{
+display:grid;
+gap:20px;
+max-width:700px;
+margin:auto;
+}
+
+.skill span{
+display:block;
+margin-bottom:6px;
+}
+
+.bar{
+height:10px;
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:#38bdf8;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#020617;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+nav ul{
+display:none;
+}
+.hero h1{
+font-size:2.2rem;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Krishna.dev</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button class="toggle" onclick="toggleTheme()">Theme</button>
+</nav>
+
+<section class="hero">
+
+<img
+class="profile"
+src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+alt="Profile">
+
+<h1>Krishna Yadav</h1>
+
+<div class="typing"></div>
+
+<p>
+Web Developer, Python Programmer and Freelancer.
+Building modern websites and digital experiences.
+</p>
+
+<div class="btns">
+<a href="#contact" class="btn">Hire Me</a>
+<a href="https://github.com" target="_blank" class="btn">GitHub</a>
+</div>
+
+</section>
+
+<section id="about" class="fade">
+<h2 class="title">About Me</h2>
+
+<div class="glass">
+<p>
+Hello! I'm <strong>Krishna Yadav</strong>, a passionate and self-motivated Web Developer and Python Programmer from India. I enjoy building modern, responsive, and user-friendly websites that help individuals and businesses establish a strong online presence.
+
+My journey into technology started with curiosity about how websites and applications work. Since then, I have been continuously learning web development, programming, and digital tools to improve my skills and create better projects. I have experience working with HTML, CSS, JavaScript, and Python, and I enjoy turning ideas into functional and visually appealing websites.
+
+I am particularly interested in frontend development, website design, automation using Python, and creating practical solutions that solve real-world problems. Whether it's a personal portfolio, business website, landing page, or custom web project, I focus on writing clean code and delivering a smooth user experience.
+
+Apart from web development, I am always exploring new technologies, improving my problem-solving abilities, and learning industry best practices. I believe that continuous learning and consistency are the keys to becoming a successful developer.
+
+Currently, I am looking for freelance opportunities, collaborations, and real-world projects where I can apply my skills, gain valuable experience, and help clients achieve their goals through technology.
+
+When I'm not coding, I spend time learning new development techniques, exploring open-source projects, and working on personal projects that help me grow as a developer.
+</p>
+</div>
+</section>
+
+<section id="skills" class="fade">
+
+<h2 class="title">Skills</h2>
+
+<div class="glass skills">
+
+<div class="skill">
+<span>HTML</span>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<span>CSS</span>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<span>JavaScript</span>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<span>Python</span>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+</div>
+</section>
+
+<section id="projects" class="fade">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80">
+<h3>Portfolio Website</h3>
+<p>Modern personal portfolio built with HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80">
+<h3>Business Landing Page</h3>
+<p>Responsive landing page for local businesses and startups.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80">
+<h3>Python Project</h3>
+<p>Automation and utility tools created using Python.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="glass contact">
+<p>📧 Email:ky437217@gmail.com </p>
+<p>phone :7348225144</p>
+<p>💻 Freelancer & Web Developer</p>
+
+<a href="mailto:ky437217@gmail.com" class="btn">
+Hire Me
+</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Krishna Yadav | Reseved Portfolio 2026
+</footer>
+
+<script>
+function toggleTheme(){
+document.body.classList.toggle("light");
+}
+
+const words=[
+"Web Developer",
+"Python Programmer",
+"Freelancer",
+"Frontend Developer"
+];
+
+let i=0;
+let j=0;
+let current="";
+let isDeleting=false;
+
+function type(){
+
+current=words[i];
+
+if(!isDeleting){
+document.querySelector(".typing").textContent=
+current.substring(0,j++);
+if(j>current.length+1){
+isDeleting=true;
+setTimeout(type,1000);
+return;
+}
+}
+else{
+document.querySelector(".typing").textContent=
+current.substring(0,j--);
+
+if(j===0){
+isDeleting=false;
+i=(i+1)%words.length;
+}
+}
+
+setTimeout(type,isDeleting?50:100);
+}
+
+type();
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
