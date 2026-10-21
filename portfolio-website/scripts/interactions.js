@@ -2,6 +2,29 @@
   const progress = document.getElementById('scroll-progress-bar');
   const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-navigation');
+  const closeMenu = () => {
+    if (!menuToggle || !nav) return;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    nav.classList.remove('is-open');
+  };
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+      nav.classList.toggle('is-open', !isOpen);
+    });
+    nav.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    document.addEventListener('click', event => {
+      if (!nav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+    });
+  }
 
   const updateProgress = () => {
     if (!progress) return;
