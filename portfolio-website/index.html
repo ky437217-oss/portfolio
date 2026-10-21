@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Krishna Yadav home"><span class="brand-mark">K<span>Y</span></span><span class="brand-name">krishna<span>.dev</span></span></a>
@@ -92,10 +93,11 @@
       </section>
 
       <section class="contact-section section" id="contact">
-        <div class="contact-glow"></div><div class="section-kicker">04 / WHAT'S NEXT?</div><h2>Have an idea?<br><span class="gradient-text">Let's build toward it.</span></h2><p>I'm learning in public and always looking for the next useful thing to create.</p><a class="button button-primary" href="https://github.com/ky437217-oss" target="_blank" rel="noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a>
+        <div class="contact-glow"></div><div class="section-kicker">04 / WHAT'S NEXT?</div><h2>Have an idea?<br><span class="gradient-text">Let's build toward it.</span></h2><p>I'm learning in public and always looking for the next useful thing to create.</p><div class="contact-actions"><a class="button button-primary" href="https://github.com/ky437217-oss" target="_blank" rel="noreferrer">Connect on GitHub <span aria-hidden="true">↗</span></a><button class="button button-quiet share-button" id="share-portfolio" type="button">Share portfolio <span aria-hidden="true">↗</span></button></div><p class="share-status" id="share-status" role="status" aria-live="polite"></p>
       </section>
     </main>
     <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">K<span>Y</span></span><span class="brand-name">krishna<span>.dev</span></span></a><p>Designed with curiosity. Built one step at a time.</p><a href="#home" class="back-top">BACK TO TOP ↑</a><span class="footer-copy">© 2026 Krishna Yadav</span></footer>
   </div>
+  <script src="scripts/interactions.js" defer></script>
 </body>
 </html>
